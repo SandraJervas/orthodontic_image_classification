@@ -7,7 +7,7 @@ import numpy as np
 
 model = models.resnet18()
 model.fc = torch.nn.Linear(model.fc.in_features, 7)
-model.load_state_dict(torch.load("models/resnet18.pth"))
+model.load_state_dict(torch.load("models/resnet18_final.pth"))
 model.eval()
 
 transform = transforms.Compose([transforms.Resize((224, 224)), transforms.ToTensor()])
