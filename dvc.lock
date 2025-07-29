@@ -1,0 +1,25 @@
+schema: '2.0'
+stages:
+  split_data:
+    cmd: python src/prepare_data.py
+    deps:
+    - path: data/processed/images
+      hash: md5
+      md5: 8cf77642a31b275660f0f5d356353f47.dir
+      size: 452599509
+      nfiles: 5302
+    - path: src/prepare_data.py
+      hash: md5
+      md5: 58ab19c5644a0f7cd3fb60e376142f51
+      size: 1164
+    params:
+      params.yaml:
+        split.seed: 42
+        split.test_size: 0.15
+        split.val_size: 0.15
+    outs:
+    - path: data/processed/split
+      hash: md5
+      md5: 13b17614d430c31a2713e3ae71971e56.dir
+      size: 449067959
+      nfiles: 5252

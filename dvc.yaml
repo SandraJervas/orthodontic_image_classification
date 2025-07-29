@@ -1,0 +1,12 @@
+stages:
+  split_data:
+    cmd: python src/prepare_data.py
+    deps:
+    - data/processed/images
+    - src/prepare_data.py
+    params:
+    - split.seed
+    - split.test_size
+    - split.val_size
+    outs:
+    - data/processed/split
