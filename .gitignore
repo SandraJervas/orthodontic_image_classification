@@ -1,0 +1,10 @@
+# .gitignore
+.ovenv/
+__pycache__/
+*.pyc
+*.pth
+data/
+models/
+outputs/
+.dvc/
+.env
